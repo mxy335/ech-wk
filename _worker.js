@@ -15,8 +15,8 @@ export default {
       
       if (!upgradeHeader || upgradeHeader.toLowerCase() !== 'websocket') {
         return new URL(request.url).pathname === '/' 
-          ? new Response('WebSocket Proxy Server', { status: 200 })
-          : new Response('Expected WebSocket', { status: 426 });
+          ? new Response('Hello, this is under construction, please wait...', { status: 200 })
+          : new Response('Hello, this is under construction, please wait...agan', { status: 426 });
       }
 
       if (token && request.headers.get('Sec-WebSocket-Protocol') !== token) {
